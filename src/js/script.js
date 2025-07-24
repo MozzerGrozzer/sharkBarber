@@ -69,14 +69,14 @@ function chooseSlot(slots, index) {
 
 // --- TESTING ---
 
-// Simulate current time (for testing; use real time for production)
-let testHour = 13;   // Set to current hour for real use: (new Date()).getHours()
-let testMinute = 15; // Set to current minute: (new Date()).getMinutes()
+// Simulate current time (this is for testing if want to use the real time copy the string on the side)
+let testHour = 13;   // (new Date()).getHours()
+let testMinute = 15; // (new Date()).getMinutes()
 
 let slots = generateSlots();
 let slotsWithStatus = markExpiredSlots(slots, testHour, testMinute);
 
-// Display slots and their status
+// slot status
 slotsWithStatus.forEach((slot, i) => {
     console.log(
         `${i}: ${slot.hour.toString().padStart(2,'0')}:${slot.minute === 0 ? '00' : '30'} - ` +
