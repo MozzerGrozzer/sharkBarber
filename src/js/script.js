@@ -28,30 +28,33 @@ for (let h= 8; h<=21; h++){
         slots.push({hour: h, minute:30,period:timeCheck(h)})
     }
 }
-/*
-print all the available barber slots
-always comment it to test (!important)
-*/ 
 
-// slots.forEach(slot => {
-//     console.log(
-//         `${slot.hour.toString().padStart(2, '0')}:${slot.minute === 0 ? '00' : '30'} - ${slot.period}`
-//     );
-// });
+// this shows every hour and what time of day it is (it was a test)
+slots.forEach(slot => {
+    console.log(
+        `${slot.hour.toString().padStart(2, '0')}:${slot.minute === 0 ? '00' : '30'} - ${slot.period} `
+    );
+});
 
 const clients=[
 {
-    name:'Jonas', 
-    hair:true, 
-    beard:false,
-    time: timeCheck(19)
+        name:'Jonas', 
+        hair:true, 
+        beard:false,
+        time: timeCheck(9)
     },{
-    name:'matheus',
-    hair:true,
-    beard:true,
-}
+        name:'matheus',
+        hair:true,
+        beard:true,
+        time: timeCheck(13)
+    },{
+        name:'Kyro',
+        hair:false,
+        beard:true,
+        time: timeCheck(19)
+    }
 ]
 
-console.log(clients[0])
+// console.log(clients)
 
 // ALWAYS REMEMBER TO NODE IT WHERE THE SCRIPT IS
